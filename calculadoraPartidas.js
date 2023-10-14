@@ -1,10 +1,32 @@
-console.log()
+let registraVitorias = prompt("Digite o numero de vitorias")
+let registraDerrotas = prompt("Digite o numero de derrotas")
+let vitorias = parseInt(registraVitorias)
+let derrotas = parseInt(registraDerrotas)
+let saldoVitorias = calculoSaldoVitorias(vitorias, derrotas)
+let nivel = ""
 
 
+function calculoSaldoVitorias(vitorias, derrotas){
+    return vitorias - derrotas
+}
 
+if (saldoVitorias < 10){
+    nivel = "Ferro"
+}else if(saldoVitorias > 10 && saldoVitorias <= 20) {
+    nivel = "Bronze "
+}else if(saldoVitorias > 20 && saldoVitorias <= 50) {
+    nivel = "Prata "
+}else if(saldoVitorias > 50 && saldoVitorias <= 80) {
+    nivel = "Ouro "
+}else if(saldoVitorias > 80 && saldoVitorias <= 90) {
+    nivel = "Diamante "
+}else if(saldoVitorias > 90 && saldoVitorias <= 100) {
+    nivel = "Lendário "
+}else{
+    nivel = "Imortal"
+}
 
-
-
+console.log (`O Herói tem de saldo de ${saldoVitorias} vitorias e está no nível ${nivel}`)
 
 
 
